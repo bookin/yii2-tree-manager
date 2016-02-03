@@ -475,6 +475,7 @@ HTML;
     {
         $this->initTreeView();
         parent::init();
+        $this->initOptions();
     }
 
     /**
@@ -486,7 +487,6 @@ HTML;
             $this->allowNewRoots = false;
         }
         $this->_nodes = $this->query->all();
-        $this->initOptions();
         $this->registerAssets();
         echo $this->renderWidget();
     }
